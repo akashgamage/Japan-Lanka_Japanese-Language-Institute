@@ -35,7 +35,7 @@ Here are some screenshots of the user interfaces of the Japan Lanka Institute Ma
 
 ![Start Page UI](/Screenshots/Startpage.png)
 ![Admin Dashboard UI](/Screenshots/FeedbackanalysisDashboard.png)
-![Staff Dashboard UI](/Screenshots/Studentprofile.png)
+![Staff Dashboard UI](/Screenshots/VisaRegistrationdashboard.png)
 ![Login Page UI](/Screenshots/AdminLoginpage.png)
 
 ## Usage

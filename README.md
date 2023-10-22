@@ -33,8 +33,8 @@ Welcome to the Japan Lanka Institute Management System repository! This is a com
 
 Here are some screenshots of the user interfaces of the Japan Lanka Institute Management System:
 
-![Student Registration UI](/Screenshots/student_registration.png)
-![Visa Registration UI](/Screenshots/visa_registration.png)
+![Start Page UI](/Screenshots/Startpage.png)
+![Admin Dashboard UI](/Screenshots/AdminLoginpage.png)
 ![Exam Registration UI](/Screenshots/exam_registration.png)
 ![Admin Dashboard UI](/Screenshots/admin_dashboard.png)
 

@@ -29,6 +29,15 @@ Welcome to the Japan Lanka Institute Management System repository! This is a com
 - Comprehensive dashboard for administrators.
 - Monitor and manage all aspects of the system.
 
+## User Interface Images
+
+Here are some screenshots of the user interfaces of the Japan Lanka Institute Management System:
+
+![Student Registration UI](/Screenshots/student_registration.png)
+![Visa Registration UI](/Screenshots/visa_registration.png)
+![Exam Registration UI](/Screenshots/exam_registration.png)
+![Admin Dashboard UI](/Screenshots/admin_dashboard.png)
+
 ## Usage
 
 1. Clone the repository to your local machine:

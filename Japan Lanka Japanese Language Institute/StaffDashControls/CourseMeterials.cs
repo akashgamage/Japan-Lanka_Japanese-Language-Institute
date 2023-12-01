@@ -58,6 +58,46 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
             }
         }
 
+    
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Do you want tO Upload this file?", "Upload File", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        String filename = dlg.FileName;
+                        UploadFile();
+
+                    }
+                }
+
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Do you want tO Upload this file?", "Upload File", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        String filename = dlg.FileName;
+                        UploadFile();
+
+                    }
+                }
+
+            }
+        }
         public void UploadFile()
         {
             byte[] file;
@@ -69,16 +109,29 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
                     file = memory.ToArray();
                 }
             }
-            cmd = new SqlCommand("INSERT INTO course_materials VALUES(@course_id,@material_name,@material_description,@material)", con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@course_id", comboBox1.Text);
-            cmd.Parameters.AddWithValue("@material_name", textBox2.Text);
-            cmd.Parameters.AddWithValue("@material_description", textBox3.Text);
             cmd.Parameters.AddWithValue("@material", file);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+           
             MessageBox.Show("File Uploaded Successfully");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("insert into course_materials values(@course_id,@material_name,@material)", con);
+                cmd.Parameters.AddWithValue("@course_id", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@material_name", textBox2.Text);
+                cmd.Parameters.AddWithValue("@material", textBox1.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Saved");
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

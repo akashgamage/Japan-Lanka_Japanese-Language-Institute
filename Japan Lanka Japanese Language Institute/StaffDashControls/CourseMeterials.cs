@@ -15,7 +15,7 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
 {
     public partial class CourseMeterials : UserControl
     {
-         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-F2O073A4\SQLEXPRESS;Initial Catalog=final4;Integrated Security=True");
+         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-FETG8PP;Initial Catalog=JapanLanka;Integrated Security=True");
          SqlCommand cmd;
         public CourseMeterials()
         {
@@ -40,30 +40,13 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using(OpenFileDialog dlg = new OpenFileDialog() {Filter = "PDF Documnets(*.pdf)|*.pdf",ValidateNames = true })
-            {
-                if(dlg.ShowDialog() == DialogResult.OK)
-                {
-                    DialogResult dialog = MessageBox.Show("Do you want tO Upload this file?", "Upload File", MessageBoxButtons.YesNo , MessageBoxIcon.Question);
-                    if(dialog == DialogResult.Yes)
-                    {
-                        String filename= dlg.FileName;
-                        UploadFile();
-                       
-                    }
-                }
-                
-            }
-        }
-
+  
     
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
+            /*using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -76,14 +59,14 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
                     }
                 }
 
-            }
+            }*/
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
+           /* using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -96,11 +79,54 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
                     }
                 }
 
+            }*/
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog() { Filter = "PDF Documnets(*.pdf)|*.pdf", ValidateNames = true })
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Do you want tO Upload this file?", "Upload File", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        String filename = dlg.FileName;
+                        UploadFile(filename);
+
+                    }
+                }
+
             }
         }
-        public void UploadFile()
+
+        public void UploadFile(string file)
         {
-            byte[] file;
+            con.Open();
+            FileStream fs = File.OpenRead(file);
+            byte[] contents = new byte[fs.Length];
+            fs.Read(contents, 0, (int)fs.Length);
+            fs.Close();
+
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO course_material(course_type,documents,recording,past_papers) VALUES(@course_type,@material_doc,@material_rec,@material_pp)", con))
+            {
+                cmd.Parameters.AddWithValue("@course_type", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@material_doc", file);
+                cmd.Parameters.AddWithValue("@material_rec", textBox2.Text);
+               
+                cmd.Parameters.AddWithValue("@material_pp", textBox3.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Successfully Saved");
+                con.Close();
+            }
+
+
+
+            
+            
+            
+            
+            /*byte[] file;
             using (Stream stream = File.OpenRead(textBox1.Text))
             {
                 using (MemoryStream memory = new MemoryStream())
@@ -111,18 +137,20 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
             }
             cmd.Parameters.AddWithValue("@material", file);
            
-            MessageBox.Show("File Uploaded Successfully");
+            MessageBox.Show("File Uploaded Successfully");*/
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
+           /* try
             {
                 con.Open();
                 cmd = new SqlCommand("insert into course_materials values(@course_id,@material_name,@material)", con);
                 cmd.Parameters.AddWithValue("@course_id", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@material_name", textBox2.Text);
-                cmd.Parameters.AddWithValue("@material", textBox1.Text);
+                
+                UploadFile();
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Successfully Saved");
                 con.Close();
@@ -130,7 +158,7 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
 
         }
     }

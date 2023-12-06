@@ -17,7 +17,7 @@ namespace Japan_Lanka_Japanese_Language_Institute.AdminDashControls
 {
     public partial class CourseAnalysis : UserControl
     {
-        private string connectionString = "Data Source=LAPTOP-F2O073A4\\SQLEXPRESS;Initial Catalog=final4;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-FETG8PP;Initial Catalog=JapanLanka;Integrated Security=True";
         public CourseAnalysis()
         {
             InitializeComponent();

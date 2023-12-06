@@ -113,5 +113,10 @@ namespace Japan_Lanka_Japanese_Language_Institute.AdminDashControls
             chart3.Series["Approved"].Points.DataBindXY(XValues3, YValues3);
             chart3.Series["Rejected"].Points.DataBindXY(XValues3, YValues3_1);
         }
+
+        private void chart2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

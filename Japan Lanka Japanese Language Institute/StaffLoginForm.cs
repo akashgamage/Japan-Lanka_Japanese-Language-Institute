@@ -64,7 +64,7 @@ namespace Japan_Lanka_Japanese_Language_Institute
 
         private void Button_StaffLogin_Click_1(object sender, EventArgs e)
         {
-           /* if (TextBox_StaffID.Text == "")
+            if (TextBox_StaffID.Text == "")
             {                 MessageBox.Show("Please enter your Staff ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                            TextBox_StaffID.Focus();
                            return;
@@ -79,7 +79,7 @@ namespace Japan_Lanka_Japanese_Language_Institute
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-FETG8PP;Initial Catalog=Japan_Lanka;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=DESKTOP-FETG8PP;Initial Catalog=JapanLanka;Integrated Security=True");
                     SqlCommand cmd =  new SqlCommand("select * from Staff where stid=@stid and password=@password", con);
                     cmd.Parameters.AddWithValue("@stid", TextBox_StaffID.Text);
                     cmd.Parameters.AddWithValue("@password", TextBox_StaffPassword.Text);
@@ -105,11 +105,11 @@ namespace Japan_Lanka_Japanese_Language_Institute
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }*/
+            }
             
-            StaffDashboard ss = new StaffDashboard();
+            /*StaffDashboard ss = new StaffDashboard();
             ss.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void label4_Click(object sender, EventArgs e)

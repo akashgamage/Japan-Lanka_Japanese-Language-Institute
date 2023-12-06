@@ -68,7 +68,7 @@
             this.Button_AdminLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_AdminLogin.ForeColor = System.Drawing.Color.White;
             this.Button_AdminLogin.Location = new System.Drawing.Point(627, 446);
-            this.Button_AdminLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button_AdminLogin.Margin = new System.Windows.Forms.Padding(4);
             this.Button_AdminLogin.Name = "Button_AdminLogin";
             this.Button_AdminLogin.Size = new System.Drawing.Size(360, 46);
             this.Button_AdminLogin.TabIndex = 4;
@@ -158,7 +158,7 @@
             this.TextBox_AdminPassword.Location = new System.Drawing.Point(691, 346);
             this.TextBox_AdminPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TextBox_AdminPassword.Name = "TextBox_AdminPassword";
-            this.TextBox_AdminPassword.PasswordChar = '\0';
+            this.TextBox_AdminPassword.PasswordChar = '*';
             this.TextBox_AdminPassword.PlaceholderText = "";
             this.TextBox_AdminPassword.SelectedText = "";
             this.TextBox_AdminPassword.Size = new System.Drawing.Size(296, 44);
@@ -179,7 +179,7 @@
             // 
             this.pictureBox3.Image = global::Japan_Lanka_Japanese_Language_Institute.Properties.Resources._2606153_5633;
             this.pictureBox3.Location = new System.Drawing.Point(601, 310);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 100);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             // 
             this.pictureBox2.Image = global::Japan_Lanka_Japanese_Language_Institute.Properties.Resources._2606517_5856;
             this.pictureBox2.Location = new System.Drawing.Point(601, 197);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +201,7 @@
             // 
             this.pictureBox1.Image = global::Japan_Lanka_Japanese_Language_Institute.Properties.Resources.AdminLogin;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(533, 612);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -243,7 +243,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminLoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLoginForm";

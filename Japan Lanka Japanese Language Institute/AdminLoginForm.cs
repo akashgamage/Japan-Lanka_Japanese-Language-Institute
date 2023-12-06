@@ -68,9 +68,17 @@ namespace Japan_Lanka_Japanese_Language_Institute
             }
             else if (TextBox_AdminID.Text == "Admin" && TextBox_AdminPassword.Text == "Admin")
             {
+                MessageBox.Show("Login Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AdminDashboard ss = new AdminDashboard();
                 ss.Show();
                 this.Hide();
+
+                
+            }
+
+            else
+            {
+                MessageBox.Show("Login Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // wait for admin dashborad and admin table of databse in the project 

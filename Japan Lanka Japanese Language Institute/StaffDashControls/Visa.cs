@@ -416,10 +416,12 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
                     if (rowsAffected > 0)
                     {
                         Console.WriteLine("Data inserted successfully.");
+                        MessageBox.Show("Data Insert Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         Console.WriteLine("Data insertion failed.");
+                        MessageBox.Show("Data inserted successfully");
                     }
 
                 }

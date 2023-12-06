@@ -182,7 +182,7 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
 
 
             
-            string connectionString = "Data Source=SiCks-ROG-G14\\MSSQLSERVER01;Initial Catalog=final;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-FETG8PP;Initial Catalog=JapanLanka;Integrated Security=True";
             string insertQuery = "insert into course (full_name,dob,age,gender,address,email,nic,class,al_exam,intake,ambassad_name) values (@Fullname,@DOB,@AGE,@Gender,@Address,@Email,@NIC,@Classes,@ALvel,@Intake,@Ambassador)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -209,10 +209,12 @@ namespace Japan_Lanka_Japanese_Language_Institute.StaffDashControls
                     if (rowsAffected > 0)
                     {
                         Console.WriteLine("Data inserted successfully.");
+                        MessageBox.Show("Data Insert Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         Console.WriteLine("Data insertion failed.");
+                        MessageBox.Show("Data inserted Unsuccessfully");
                     }
 
                 }

@@ -86,5 +86,10 @@ namespace Japan_Lanka_Japanese_Language_Institute.AdminDashControls
         {
             chart3.Series["Enrollments"].Points.DataBindXY(XValues3, YValues3);
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

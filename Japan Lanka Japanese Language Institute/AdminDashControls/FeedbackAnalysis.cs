@@ -129,5 +129,10 @@ namespace Japan_Lanka_Japanese_Language_Institute.AdminDashControls
             chart3.Series["Normal"].Points.DataBindXY(XValues3, YValues3_1);
             chart3.Series["Bad"].Points.DataBindXY(XValues3, YValues3_2);
         }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

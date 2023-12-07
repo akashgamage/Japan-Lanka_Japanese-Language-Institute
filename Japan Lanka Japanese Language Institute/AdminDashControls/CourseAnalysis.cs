@@ -141,5 +141,10 @@ namespace Japan_Lanka_Japanese_Language_Institute.AdminDashControls
         {
 
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
